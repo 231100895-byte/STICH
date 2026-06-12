@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>STICH – Platform Pembelajaran PAI & Karakter Anak</title>
+  <meta name="description" content="STICH adalah platform pembelajaran PAI dan Karakter Anak yang menyenangkan, interaktif, dan gamified untuk siswa SD dan SMP.">
+  <meta name="theme-color" content="#00BFA5">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Poppins:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ====================== APP WRAPPER ====================== -->
+  <div class="app-container" id="app">
+
+    <!-- =========== TOP BAR =========== -->
+    <header class="top-bar">
+      <div class="top-bar__left">
+        <div class="logo">
+          <span class="logo__star">✨</span>
+          <span class="logo__text">STICH</span>
+        </div>
+        <span class="logo__tagline">Belajar itu Seru!</span>
+      </div>
+      <div class="top-bar__right">
+        <button class="icon-btn" id="notif-btn" aria-label="Notifikasi">
+          <i class="fa-solid fa-bell"></i>
+          <span class="notif-badge" aria-label="3 notifikasi baru">3</span>
+        </button>
+        <div class="avatar-wrap" id="avatar-btn" role="button" tabindex="0" aria-label="Profil Ahmad Fauzi">
+          <img
+            src="https://api.dicebear.com/7.x/adventurer/svg?seed=AhmadFauzi&backgroundColor=b6e3f4,c0aede"
+            alt="Avatar Ahmad Fauzi"
+            width="38"
+            height="38"
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- =========== MAIN SCROLLABLE CONTENT =========== -->
+    <main class="main-content" id="main-content">
+
+      <!-- ── HERO / GREETING CARD ── -->
+      <section class="section section--hero" aria-label="Sambutan">
+        <div class="hero-card">
+
+          <!-- Decorative bubbles -->
+          <span class="bubble bubble--1" aria-hidden="true"></span>
+          <span class="bubble bubble--2" aria-hidden="true"></span>
+          <span class="bubble bubble--3" aria-hidden="true"></span>
+
+          <!-- Floating emoji -->
+          <span class="float-deco float--star"  aria-hidden="true">⭐</span>
+          <span class="float-deco float--spark" aria-hidden="true">✨</span>
+          <span class="float-deco float--moon"  aria-hidden="true">🌙</span>
+
+          <!-- Text -->
+          <div class="hero-text">
+            <p class="hero-greet">Assalamu'alaikum 👋</p>
+            <h1 class="hero-name">Ahmad Fauzi!</h1>
+            <p class="hero-sub">Yuk lanjutkan belajarmu hari ini 🌟</p>
+          </div>
+
+          <!-- Stats row -->
+          <div class="hero-stats" aria-label="Statistik belajar">
+            <div class="stat">
+              <span class="stat__icon">🔥</span>
+              <div class="stat__info">
+                <span class="stat__val">7</span>
+                <span class="stat__lbl">Hari Streak</span>
+              </div>
+            </div>
+            <div class="stat-sep" aria-hidden="true"></div>
+            <div class="stat">
+              <span class="stat__icon">⭐</span>
+              <div class="stat__info">
+                <span class="stat__val">350</span>
+                <span class="stat__lbl">Poin XP</span>
+              </div>
+            </div>
+            <div class="stat-sep" aria-hidden="true"></div>
+            <div class="stat">
+              <span class="stat__icon">🏅</span>
+              <div class="stat__info">
+                <span class="stat__val">Silver</span>
+                <span class="stat__lbl">Peringkat</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Weekly progress -->
+          <div class="hero-progress">
+            <div class="progress-row">
+              <span class="progress-lbl">Progress Mingguan</span>
+              <span class="progress-pct">65%</span>
+            </div>
+            <div class="progress-track" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-fill" data-width="65"></div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ── MISI HARIAN ── -->
+      <section class="section" id="misi-harian" aria-labelledby="misi-title">
+        <div class="sec-header">
+          <h2 class="sec-title" id="misi-title">
+            <span aria-hidden="true">🎯</span> Misi Harian
+          </h2>
+          <a href="#" class="sec-link" aria-label="Lihat semua misi">Lihat Semua</a>
+        </div>
+
+        <div class="misi-list" role="list">
+
+          <!-- Misi 1 – SELESAI -->
+          <div class="misi-card misi-card--done" id="misi-doa" role="listitem">
+            <div class="misi-ico" aria-hidden="true">🤲</div>
+            <div class="misi-body">
+              <h3 class="misi-title">Doa Pagi</h3>
+              <p class="misi-desc">Baca doa memulai hari</p>
+              <div class="mini-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                <div class="mini-fill" data-width="100"></div>
+              </div>
+            </div>
+            <div class="misi-xp" aria-label="Reward 10 XP">+10 XP</div>
+            <div class="misi-btn misi-btn--done" aria-label="Selesai">
+              <i class="fa-solid fa-check" aria-hidden="true"></i>
+            </div>
+          </div>
+
+          <!-- Misi 2 – Hafalan -->
+          <div class="misi-card" id="misi-hafalan" role="listitem">
+            <div class="misi-ico" aria-hidden="true">📖</div>
+            <div class="misi-body">
+              <h3 class="misi-title">Hafalan Surah</h3>
+              <p class="misi-desc">Al-Falaq • 2 / 5 ayat</p>
+              <div class="mini-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
+                <div class="mini-fill" data-width="40"></div>
+              </div>
+            </div>
+            <div class="misi-xp" aria-label="Reward 25 XP">+25 XP</div>
+            <button class="misi-btn misi-btn--go" aria-label="Mulai hafalan surah">
+              <i class="fa-solid fa-play" aria-hidden="true"></i>
+            </button>
+          </div>
+
+          <!-- Misi 3 – Kuis -->
+          <div class="misi-card" id="misi-kuis" role="listitem">
+            <div class="misi-ico" aria-hidden="true">🧠</div>
+            <div class="misi-body">
+              <h3 class="misi-title">Kuis Akhlak</h3>
+              <p class="misi-desc">10 soal pilihan ganda</p>
+              <div class="mini-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                <div class="mini-fill" data-width="0"></div>
+              </div>
+            </div>
+            <div class="misi-xp" aria-label="Reward 30 XP">+30 XP</div>
+            <button class="misi-btn misi-btn--go" aria-label="Mulai kuis akhlak">
+              <i class="fa-solid fa-play" aria-hidden="true"></i>
+            </button>
+          </div>
+
+          <!-- Misi 4 – Kisah Nabi -->
+          <div class="misi-card" id="misi-kisah" role="listitem">
+            <div class="misi-ico" aria-hidden="true">📚</div>
+            <div class="misi-body">
+              <h3 class="misi-title">Kisah Nabi</h3>
+              <p class="misi-desc">Nabi Ibrahim AS</p>
+              <div class="mini-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                <div class="mini-fill" data-width="0"></div>
+              </div>
+            </div>
+            <div class="misi-xp" aria-label="Reward 20 XP">+20 XP</div>
+            <button class="misi-btn misi-btn--go" aria-label="Mulai kisah nabi">
+              <i class="fa-solid fa-play" aria-hidden="true"></i>
+            </button>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ── SMART LEARNING MODULES ── -->
+      <section class="section" id="smart-learning" aria-labelledby="modul-title">
+        <div class="sec-header">
+          <h2 class="sec-title" id="modul-title">
+            <span aria-hidden="true">🎓</span> Smart Learning
+          </h2>
+          <a href="#" class="sec-link" aria-label="Lihat semua modul">Semua Modul</a>
+        </div>
+
+        <div class="modules-grid" role="list">
+
+          <!-- Modul 1 -->
+          <div class="mod-card" id="mod-quran" role="listitem" tabindex="0"
+               style="--mc:#00BFA5;--ml:#D4F5EF;"
+               aria-label="Modul Al-Qur'an dan Tajwid, progress 70%">
+            <div class="mod-bg" aria-hidden="true"></div>
+            <span class="mod-icon" aria-hidden="true">📖</span>
+            <h3 class="mod-name">Al-Qur'an &amp; Tajwid</h3>
+            <p class="mod-desc">Belajar membaca &amp; memahami</p>
+            <div class="mod-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+              <div class="mod-fill" data-width="70"></div>
+            </div>
+            <span class="mod-level">Juz 1 · 70%</span>
+          </div>
+
+          <!-- Modul 2 -->
+          <div class="mod-card" id="mod-akidah" role="listitem" tabindex="0"
+               style="--mc:#7C4DFF;--ml:#EDE7F6;"
+               aria-label="Modul Akidah dan Akhlak, progress 50%">
+            <div class="mod-bg" aria-hidden="true"></div>
+            <span class="mod-icon" aria-hidden="true">🕌</span>
+            <h3 class="mod-name">Akidah &amp; Akhlak</h3>
+            <p class="mod-desc">Iman &amp; perilaku terpuji</p>
+            <div class="mod-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+              <div class="mod-fill" data-width="50"></div>
+            </div>
+            <span class="mod-level">Bab 5 · 50%</span>
+          </div>
+
+          <!-- Modul 3 -->
+          <div class="mod-card" id="mod-fiqih" role="listitem" tabindex="0"
+               style="--mc:#FF6F00;--ml:#FFF3E0;"
+               aria-label="Modul Fiqih Ibadah, progress 35%">
+            <div class="mod-bg" aria-hidden="true"></div>
+            <span class="mod-icon" aria-hidden="true">🤲</span>
+            <h3 class="mod-name">Fiqih Ibadah</h3>
+            <p class="mod-desc">Tata cara ibadah sehari-hari</p>
+            <div class="mod-bar" role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100">
+              <div class="mod-fill" data-width="35"></div>
+            </div>
+            <span class="mod-level">Bab 3 · 35%</span>
+          </div>
+
+          <!-- Modul 4 -->
+          <div class="mod-card" id="mod-ski" role="listitem" tabindex="0"
+               style="--mc:#D81B60;--ml:#FCE4EC;"
+               aria-label="Modul Sejarah Islam, progress 60%">
+            <div class="mod-bg" aria-hidden="true"></div>
+            <span class="mod-icon" aria-hidden="true">🏛️</span>
+            <h3 class="mod-name">Sejarah Islam</h3>
+            <p class="mod-desc">Kisah para nabi &amp; sahabat</p>
+            <div class="mod-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+              <div class="mod-fill" data-width="60"></div>
+            </div>
+            <span class="mod-level">Bab 6 · 60%</span>
+          </div>
+
+          <!-- Modul 5 -->
+          <div class="mod-card" id="mod-karakter" role="listitem" tabindex="0"
+               style="--mc:#00897B;--ml:#E0F2F1;"
+               aria-label="Modul Karakter dan Adab, progress 80%">
+            <div class="mod-bg" aria-hidden="true"></div>
+            <span class="mod-icon" aria-hidden="true">🌟</span>
+            <h3 class="mod-name">Karakter &amp; Adab</h3>
+            <p class="mod-desc">Sopan santun &amp; budi pekerti</p>
+            <div class="mod-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+              <div class="mod-fill" data-width="80"></div>
+            </div>
+            <span class="mod-level">Bab 8 · 80%</span>
+          </div>
+
+          <!-- Modul 6 -->
+          <div class="mod-card" id="mod-arab" role="listitem" tabindex="0"
+               style="--mc:#1565C0;--ml:#E3F2FD;"
+               aria-label="Modul Kosakata Arab, progress 25%">
+            <div class="mod-bg" aria-hidden="true"></div>
+            <span class="mod-icon" aria-hidden="true">🔤</span>
+            <h3 class="mod-name">Kosakata Arab</h3>
+            <p class="mod-desc">Belajar bahasa Al-Qur'an</p>
+            <div class="mod-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+              <div class="mod-fill" data-width="25"></div>
+            </div>
+            <span class="mod-level">Level 2 · 25%</span>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Bottom padding for nav -->
+      <div class="scroll-spacer" aria-hidden="true"></div>
+
+    </main>
+
+    <!-- =========== BOTTOM NAVIGATION =========== -->
+    <nav class="bottom-nav" aria-label="Navigasi utama">
+
+      <a href="#" class="nav-item active" id="nav-home" aria-label="Beranda" aria-current="page">
+        <div class="nav-ico"><i class="fa-solid fa-house" aria-hidden="true"></i></div>
+        <span class="nav-lbl">Beranda</span>
+        <span class="nav-dot" aria-hidden="true"></span>
+      </a>
+
+      <a href="#" class="nav-item" id="nav-belajar" aria-label="Belajar">
+        <div class="nav-ico"><i class="fa-solid fa-book-open" aria-hidden="true"></i></div>
+        <span class="nav-lbl">Belajar</span>
+      </a>
+
+      <a href="#" class="nav-item nav-item--fab" id="nav-misi" aria-label="Misi">
+        <div class="nav-ico nav-ico--fab" aria-hidden="true">
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <span class="nav-lbl">Misi</span>
+      </a>
+
+      <a href="#" class="nav-item" id="nav-rank" aria-label="Ranking">
+        <div class="nav-ico"><i class="fa-solid fa-trophy" aria-hidden="true"></i></div>
+        <span class="nav-lbl">Ranking</span>
+      </a>
+
+      <a href="#" class="nav-item" id="nav-profil" aria-label="Profil">
+        <div class="nav-ico"><i class="fa-solid fa-user" aria-hidden="true"></i></div>
+        <span class="nav-lbl">Profil</span>
+      </a>
+
+    </nav>
+
+  </div>
+  <!-- end .app-container -->
+
+  <script>
+    /* =====================================================
+       STICH – Home Page Script
+    ===================================================== */
+
+    // ── Animate progress bars after page load ──
+    function animateBars() {
+      document.querySelectorAll('[data-width]').forEach(el => {
+        const target = el.dataset.width + '%';
+        el.style.width = '0%';
+        requestAnimationFrame(() => {
+          setTimeout(() => { el.style.width = target; }, 200);
+        });
+      });
+    }
+
+    // ── Bottom nav active switching ──
+    document.querySelectorAll('.nav-item').forEach(item => {
+      item.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelectorAll('.nav-item').forEach(i => {
+          i.classList.remove('active');
+          i.removeAttribute('aria-current');
+        });
+        this.classList.add('active');
+        this.setAttribute('aria-current', 'page');
+      });
+    });
+
+    // ── Misi card play button ──
+    document.querySelectorAll('.misi-btn--go').forEach(btn => {
+      btn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        const card = this.closest('.misi-card');
+        card.classList.add('misi-card--pulse');
+        setTimeout(() => card.classList.remove('misi-card--pulse'), 400);
+      });
+    });
+
+    // ── Module card press effect ──
+    document.querySelectorAll('.mod-card').forEach(card => {
+      const press = () => card.classList.add('mod-card--pressed');
+      const release = () => setTimeout(() => card.classList.remove('mod-card--pressed'), 120);
+      card.addEventListener('mousedown', press);
+      card.addEventListener('touchstart', press, { passive: true });
+      card.addEventListener('mouseup', release);
+      card.addEventListener('touchend', release);
+      card.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); press(); release(); }
+      });
+    });
+
+    // ── Run on load ──
+    window.addEventListener('load', animateBars);
+  </script>
+
+</body>
+</html>
